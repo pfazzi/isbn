@@ -19,3 +19,6 @@ The preferred method of installation is via [Packagist][] and [Composer][]. Run 
 ```bash
 composer require pfazzi/isbn
 ```
+
+[packagist]: https://packagist.org/packages/ramsey/uuid
+[composer]: http://getcomposer.org/
