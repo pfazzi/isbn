@@ -8,8 +8,6 @@ use Assert\Assertion;
 final class Isbn
 {
     /**
-     * @ORM\Column(length=13)
-     *
      * @var string
      */
     private $value;
