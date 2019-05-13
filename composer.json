@@ -1,0 +1,48 @@
+{
+    "name": "pfazzi/isbn",
+    "description": "A PHP 7.2+ library containing the representation if an ISBN",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick Luca Fazzi",
+            "email": "patrick91@live.it"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "beberlei/assert": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pfazzi\\Isbn\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pfazzi\\Isbn\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": "parallel-lint src tests",
+        "phpcs": "phpcs src tests --standard=psr2 -sp --colors",
+        "phpstan": [
+            "phpstan analyse -c phpstan.neon src --level max --no-progress",
+            "phpstan analyse -c phpstan-tests.neon tests --level 4 --no-progress"
+        ],
+        "phpunit": "phpunit --verbose --colors=always",
+        "test": [
+            "@lint",
+            "@phpstan",
+            "@phpunit",
+            "@phpcs"
+        ]
+    },
+    "require-dev": {
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phpstan/phpstan-phpunit": "0.9.2",
+        "phpstan/phpstan-shim": "0.9.1",
+        "squizlabs/php_codesniffer": "^3.0"
+    }
+}
