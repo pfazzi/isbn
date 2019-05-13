@@ -1,6 +1,6 @@
 {
     "name": "pfazzi/isbn",
-    "description": "A PHP 7.2+ library containing the representation if an ISBN",
+    "description": "A PHP 7.2+ library for working with International Standard Book Numbers (ISBN)",
     "type": "library",
     "license": "MIT",
     "authors": [
